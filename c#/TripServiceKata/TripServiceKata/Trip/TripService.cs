@@ -33,7 +33,6 @@ namespace TripServiceKata.Trip
 
 		public List<Trip> GetTripsByUser(User.User user)
 		{
-			var tripList = new List<Trip>();
 			var loggedUser = _userSession.GetLoggedUser();
 			var isFriend = false;
 			if (loggedUser == null)
@@ -48,9 +47,8 @@ namespace TripServiceKata.Trip
 					break;
 				}
 			}
-			if (!isFriend) return tripList;
-			tripList = _userTripFinder.FindTripsByUser(user);
-			return tripList;
+			if (!isFriend) return new List<Trip>();
+			return _userTripFinder.FindTripsByUser(user);
 		}
 	}
 }
