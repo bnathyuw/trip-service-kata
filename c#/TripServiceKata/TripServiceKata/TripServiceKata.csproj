@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exception\DependendClassCallDuringUnitTestException.cs" />
+    <Compile Include="Exception\DependentClassCallDuringUnitTestException.cs" />
     <Compile Include="Exception\UserNotLoggedInException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trip\Trip.cs" />
