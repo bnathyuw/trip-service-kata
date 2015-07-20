@@ -10,7 +10,7 @@ namespace TripServiceKata.Tests
 		[Test]
 		public void Throws_exception()
 		{
-			var tripService = new TripService(this);
+			var tripService = new TripService(this, null);
 
 			Assert.Throws<UserNotLoggedInException>(() => tripService.GetTripsByUser(new User.User()));
 		}

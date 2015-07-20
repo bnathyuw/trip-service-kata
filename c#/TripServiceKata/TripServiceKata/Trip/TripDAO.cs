@@ -3,12 +3,12 @@ using TripServiceKata.Exception;
 
 namespace TripServiceKata.Trip
 {
-    public class TripDAO
-    {
-        public static List<Trip> FindTripsByUser(User.User user)
-        {
-            throw new DependentClassCallDuringUnitTestException(
-                        "TripDAO should not be invoked on an unit test.");
-        }
-    }
+	public class TripDAO
+	{
+		public static List<Trip> FindTripsByUser(User.User user)
+		{
+			throw new DependentClassCallDuringUnitTestException(
+				"TripDAO should not be invoked in a unit test.");
+		}
+	}
 }

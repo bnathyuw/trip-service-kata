@@ -9,10 +9,8 @@ namespace TripServiceKata.Tests
 		[Test]
 		public void Returns_no_trips()
 		{
-			var tripService = new TripService(this);
+			var tripService = new TripService(this, null);
 			var user = new User.User();
-			user.AddTrip(new Trip.Trip());
-			user.AddTrip(new Trip.Trip());
 			user.AddFriend(new User.User());
 			user.AddFriend(new User.User());
 
