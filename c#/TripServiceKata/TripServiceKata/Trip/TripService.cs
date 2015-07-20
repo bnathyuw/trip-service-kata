@@ -39,15 +39,10 @@ namespace TripServiceKata.Trip
 			if (loggedUser == null)
 				throw new UserNotLoggedInException();
 			
-			if (!IsFriend(user, loggedUser)) 
+			if (!user.IsFriendsWith(loggedUser)) 
 				return new List<Trip>();
 			
 			return _userTripFinder.FindTripsByUser(user);
-		}
-
-		private static bool IsFriend(User.User user, User.User loggedUser)
-		{
-			return user.GetFriends().Any(friend => friend == loggedUser);
 		}
 	}
 }
