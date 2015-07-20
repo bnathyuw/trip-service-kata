@@ -14,14 +14,6 @@ namespace TripServiceKata.Trip
 		List<Trip> FindTripsByUser(User.User user);
 	}
 
-	public class UserTripFinder : IUserTripFinder
-	{
-		public List<Trip> FindTripsByUser(User.User user)
-		{
-			return TripDAO.FindTripsByUser(user);
-		}
-	}
-
 	public class TripService
 	{
 		private readonly IUserSession _userSession;
